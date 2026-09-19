@@ -15,6 +15,8 @@ extern void console_init(void *fb, uint64_t w, uint64_t h, uint64_t pitch);
 extern void initrd_install(void);
 extern void task_init(uint64_t hhdm_offset);
 extern int  task_create(const char *name, void (*entry)(void));
+extern int  task_create_user(const char *name, const uint8_t *code, size_t code_size);
+extern void task_run_user(int slot);
 extern void task_yield(void);
 extern void shell_run(void);
 extern void shell_register_fb(void *fb, uint64_t w, uint64_t h, uint64_t pitch);

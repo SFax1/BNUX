@@ -41,8 +41,9 @@ isr_common_stub:
     push %r14
     push %r15
 
-    mov 120(%rsp), %rdi   # vector  (15 регистров * 8 = 120 байт смещение)
-    mov 128(%rsp), %rsi   # error_code
+    mov %rsp, %rdx          # передаём указатель на interrupt_frame
+    mov 120(%rsp), %rdi     # vector
+    mov 128(%rsp), %rsi     # error_code
     call isr_common_handler
 
     pop %r15
