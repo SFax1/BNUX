@@ -1,8 +1,8 @@
-# Mulix OS
+# BNUX
 
 **Developed by ArcXinch**
 
-A modern experimental operating system featuring a unique hybrid GUI inspired by the aesthetics of macOS and Windows 11. Mulix focuses on delivering a sleek, intuitive user experience with a custom-built graphical interface from the ground up.
+A modern experimental operating system featuring a unique hybrid GUI inspired by the aesthetics of macOS and Windows 11. BNUX focuses on delivering a sleek, intuitive user experience with a custom-built graphical interface from the ground up.
 
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-experimental-orange.svg)
@@ -22,7 +22,7 @@ A modern experimental operating system featuring a unique hybrid GUI inspired by
 
 ## 🖥️ Interface Design
 
-The Mulix desktop environment avoids direct copying but takes the best from both worlds:
+The BNUX desktop environment avoids direct copying but takes the best from both worlds:
 - **Clean Aesthetics**: Minimalist icons and smooth animations.
 - **Window Management**: Intuitive window controls with distinct color coding.
 - **Responsiveness**: Optimized for QEMU emulation and future bare-metal deployment.
@@ -31,7 +31,7 @@ The Mulix desktop environment avoids direct copying but takes the best from both
 
 ### Prerequisites
 
-To build and run Mulix, ensure you have the following installed:
+To build and run BNUX, ensure you have the following installed:
 - `gcc` / `g++` (Cross-compiler recommended for x86_64)
 - `nasm` or `yasm`
 - `make`
@@ -43,20 +43,20 @@ To build and run Mulix, ensure you have the following installed:
 Clone the repository and build the project:
 
 ```bash
-git clone https://github.com/ArcXinch/Mulix.git
-cd Mulix
+git clone https://github.com/ArcXinch/BNUX.git
+cd BNUX
 make all
 ```
 
-This will compile the kernel and generate the bootable image (usually `mulix.iso` or `disk.img`).
+This will compile the kernel and generate the bootable image (usually `BNUX.iso` or `disk.img`).
 
 ### Running with QEMU
 
-Since Mulix uses the **Limine** bootloader, it is typically booted via an ISO or disk image.
+Since BNUX uses the **Limine** bootloader, it is typically booted via an ISO or disk image.
 
 **Option 1: Boot from ISO**
 ```bash
-qemu-system-x86_64 -cdrom mulix.iso -boot d -device qemu-xhci -device usb-kbd -device usb-mouse
+qemu-system-x86_64 -cdrom BNUX.iso -boot d -device qemu-xhci -device usb-kbd -device usb-mouse
 ```
 
 **Option 2: Boot from Disk Image**
